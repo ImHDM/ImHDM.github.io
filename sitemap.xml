@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mkindustrial.dk/</loc><priority>1.0</priority></url>
+  <url><loc>https://mkindustrial.dk/automation.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mkindustrial.dk/programmering.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mkindustrial.dk/smarthome.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mkindustrial.dk/3dprint.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mkindustrial.dk/projekter.html</loc><priority>0.8</priority></url>
+</urlset>
