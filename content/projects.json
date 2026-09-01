@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "title": "Industri & Automation",
+      "tag": "Automation",
+      "image": "https://images.pexels.com/photos/36564992/pexels-photo-36564992.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Industrielt automationsudstyr og kontrolpanel",
+      "description": "Siemens PLC, ABB frekvensomformere og UMC, fejlfinding, optimering og udvikling af løsninger."
+    },
+    {
+      "title": "Programmering",
+      "tag": "Udvikling",
+      "image": "https://images.pexels.com/photos/37880001/pexels-photo-37880001.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Programmering på laptop",
+      "description": "Små programmer, automatisering, værktøjer og specialløsninger til konkrete tekniske behov."
+    },
+    {
+      "title": "Home Assistant & ESP32",
+      "tag": "Smart Home & IoT",
+      "image": "https://images.pexels.com/photos/18136105/pexels-photo-18136105.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smart Home enheder og styring",
+      "description": "Integrationer, automatisering og egne IoT-løsninger til intelligente hjem og installationer."
+    },
+    {
+      "title": "Specialdele & Prototyper",
+      "tag": "3D Print & CAD",
+      "image": "https://images.pexels.com/photos/4485456/pexels-photo-4485456.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "3D printer i værksted",
+      "description": "CAD-design og funktionelle 3D-print til prototyper, specialdele og praktiske løsninger."
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+backend:
+  name: git-gateway
+  branch: main
+  site_domain: mk-industrial-cms.netlify.app
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: pages
+    label: "Sider"
+    files:
+      - label: "Forside"
+        name: index
+        file: "content/index.json"
+        format: json
+        fields:
+          - {label: "Hero – lille tekst", name: hero_eyebrow, widget: string}
+          - {label: "Hero – før fremhævet tekst", name: hero_title_before, widget: string}
+          - {label: "Hero – fremhævet tekst", name: hero_title_highlight, widget: string}
+          - {label: "Hero – efter fremhævet tekst", name: hero_title_after, widget: string}
+          - {label: "Hero – beskrivelse", name: hero_text, widget: text}
+          - {label: "Primær knap", name: primary_button, widget: string}
+          - {label: "Sekundær knap", name: secondary_button, widget: string}
+          - {label: "Kompetencer – lille tekst", name: services_eyebrow, widget: string}
+          - {label: "Kompetencer – overskrift", name: services_title, widget: string}
+          - {label: "Kompetencer – tekst", name: services_lead, widget: text}
+          - label: "Kompetencekort"
+            name: services
+            widget: list
+            fields:
+              - {label: "Ikon", name: icon, widget: string}
+              - {label: "Titel", name: title, widget: string}
+              - {label: "Beskrivelse", name: description, widget: text}
+              - {label: "Link", name: link, widget: string}
+          - {label: "Udvikling – lille tekst", name: development_eyebrow, widget: string}
+          - {label: "Udvikling – overskrift", name: development_title, widget: string}
+          - {label: "Udvikling – tekst", name: development_lead, widget: text}
+          - label: "4 trin"
+            name: steps
+            widget: list
+            fields:
+              - {label: "Nummer", name: number, widget: string}
+              - {label: "Tekst", name: text, widget: string}
+          - {label: "Teknisk fokus – lille tekst", name: focus_eyebrow, widget: string}
+          - {label: "Teknisk fokus – overskrift", name: focus_title, widget: string}
+          - {label: "Teknisk fokus – tekst", name: focus_text, widget: text}
+          - {label: "Projekter – lille tekst", name: projects_eyebrow, widget: string}
+          - {label: "Projekter – overskrift", name: projects_title, widget: string}
+          - {label: "Projekter – tekst", name: projects_lead, widget: text}
+          - {label: "Kontakt – lille tekst", name: contact_eyebrow, widget: string}
+          - {label: "Kontakt – overskrift", name: contact_title, widget: string}
+          - {label: "Kontakt – tekst", name: contact_text, widget: text}
+          - {label: "Footer – venstre", name: footer_company, widget: string}
+          - {label: "Footer – højre", name: footer_cvr, widget: string}
+
+      - label: "Automation"
+        name: automation
+        file: "content/automation.json"
+        format: json
+        fields:
+          - {label: "Hero – lille tekst", name: hero_eyebrow, widget: string}
+          - {label: "Hero – før fremhævet tekst", name: hero_title_before, widget: string}
+          - {label: "Hero – fremhævet tekst", name: hero_title_highlight, widget: string}
+          - {label: "Hero – efter fremhævet tekst", name: hero_title_after, widget: string}
+          - {label: "Hero – beskrivelse", name: hero_text, widget: text}
+          - label: "Servicekort"
+            name: services
+            widget: list
+            fields:
+              - {label: "Ikon", name: icon, widget: string}
+              - {label: "Titel", name: title, widget: string}
+              - {label: "Beskrivelse", name: description, widget: text}
+          - {label: "Udvikling – lille tekst", name: development_eyebrow, widget: string}
+          - {label: "Udvikling – overskrift", name: development_title, widget: string}
+          - {label: "Udvikling – tekst", name: development_lead, widget: text}
+          - {label: "Mulige opgaver – overskrift", name: focus_title, widget: string}
+          - label: "Mulige opgaver"
+            name: focus_items
+            widget: list
+            field: {label: "Opgave", name: item, widget: string}
+          - {label: "Footer – venstre", name: footer_company, widget: string}
+          - {label: "Footer – højre", name: footer_cvr, widget: string}
+
+      - label: "Programmering"
+        name: programmering
+        file: "content/programmering.json"
+        format: json
+        fields:
+          - {label: "Hero – lille tekst", name: hero_eyebrow, widget: string}
+          - {label: "Hero – før fremhævet tekst", name: hero_title_before, widget: string}
+          - {label: "Hero – fremhævet tekst", name: hero_title_highlight, widget: string}
+          - {label: "Hero – efter fremhævet tekst", name: hero_title_after, widget: string}
+          - {label: "Hero – beskrivelse", name: hero_text, widget: text}
+          - label: "Servicekort"
+            name: services
+            widget: list
+            fields:
+              - {label: "Ikon", name: icon, widget: string}
+              - {label: "Titel", name: title, widget: string}
+              - {label: "Beskrivelse", name: description, widget: text}
+          - {label: "Footer – venstre", name: footer_company, widget: string}
+          - {label: "Footer – højre", name: footer_cvr, widget: string}
+
+      - label: "Smart Home"
+        name: smarthome
+        file: "content/smarthome.json"
+        format: json
+        fields:
+          - {label: "Hero – lille tekst", name: hero_eyebrow, widget: string}
+          - {label: "Hero – før fremhævet tekst", name: hero_title_before, widget: string}
+          - {label: "Hero – fremhævet tekst", name: hero_title_highlight, widget: string}
+          - {label: "Hero – efter fremhævet tekst", name: hero_title_after, widget: string}
+          - {label: "Hero – beskrivelse", name: hero_text, widget: text}
+          - label: "Servicekort"
+            name: services
+            widget: list
+            fields:
+              - {label: "Ikon", name: icon, widget: string}
+              - {label: "Titel", name: title, widget: string}
+              - {label: "Beskrivelse", name: description, widget: text}
+          - {label: "Footer – venstre", name: footer_company, widget: string}
+          - {label: "Footer – højre", name: footer_cvr, widget: string}
+
+      - label: "3D Print"
+        name: 3dprint
+        file: "content/3dprint.json"
+        format: json
+        fields:
+          - {label: "Hero – lille tekst", name: hero_eyebrow, widget: string}
+          - {label: "Hero – før fremhævet tekst", name: hero_title_before, widget: string}
+          - {label: "Hero – fremhævet tekst", name: hero_title_highlight, widget: string}
+          - {label: "Hero – efter fremhævet tekst", name: hero_title_after, widget: string}
+          - {label: "Hero – beskrivelse", name: hero_text, widget: text}
+          - label: "Servicekort"
+            name: services
+            widget: list
+            fields:
+              - {label: "Ikon", name: icon, widget: string}
+              - {label: "Titel", name: title, widget: string}
+              - {label: "Beskrivelse", name: description, widget: text}
+          - {label: "Footer – venstre", name: footer_company, widget: string}
+          - {label: "Footer – højre", name: footer_cvr, widget: string}
+
+  - name: projects
+    label: "Projekter"
+    files:
+      - label: "Alle projekter"
+        name: projects
+        file: "content/projects.json"
+        format: json
+        fields:
+          - label: "Projekter"
+            name: projects
+            widget: list
+            fields:
+              - {label: "Projektnavn", name: title, widget: string}
+              - {label: "Kategori", name: tag, widget: string}
+              - {label: "Billede", name: image, widget: image, required: false}
+              - {label: "Billedtekst / alt", name: alt, widget: string, required: false}
+              - {label: "Beskrivelse", name: description, widget: text}
