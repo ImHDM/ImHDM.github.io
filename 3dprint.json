@@ -1,0 +1,31 @@
+{
+  "hero_eyebrow": "🖨️ 3D Print & CAD",
+  "hero_title_before": "Fra idé til",
+  "hero_title_highlight": "fysisk løsning",
+  "hero_title_after": ".",
+  "hero_text": "Specialdele, prototyper, beslag og funktionelle emner – fra CAD og tilpasning til færdigt 3D-print.",
+  "services": [
+    {
+      "icon": "◈",
+      "title": "Specialdele",
+      "description": "Tilpassede dele til konkrete behov og projekter."
+    },
+    {
+      "icon": "⌗",
+      "title": "CAD",
+      "description": "Modellering og tilpasning ud fra mål, idéer eller eksisterende dele."
+    },
+    {
+      "icon": "◇",
+      "title": "Prototyper",
+      "description": "Hurtig fremstilling og afprøvning af nye idéer."
+    },
+    {
+      "icon": "⚒",
+      "title": "Funktionelle emner",
+      "description": "Beslag, værktøjer, dæksler og andre praktiske komponenter."
+    }
+  ],
+  "footer_company": "© 2026 MK Industrial Solutions",
+  "footer_cvr": "CVR: Tilføjes når virksomheden er oprettet"
+}

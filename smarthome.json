@@ -1,0 +1,31 @@
+{
+  "hero_eyebrow": "🏠 Smart Home & IoT",
+  "hero_title_before": "Et smartere hjem med",
+  "hero_title_highlight": "lokal kontrol",
+  "hero_title_after": ".",
+  "hero_text": "Opsætning, programmering og automatisering med blandt andet Home Assistant og ESP32.",
+  "services": [
+    {
+      "icon": "⌂",
+      "title": "Home Assistant",
+      "description": "Opsætning, dashboards, automatiseringer og integration af enheder."
+    },
+    {
+      "icon": "◉",
+      "title": "ESP32",
+      "description": "Specialbyggede IoT-enheder, sensorer og styringer."
+    },
+    {
+      "icon": "⇄",
+      "title": "Integration",
+      "description": "Saml forskellige enheder og systemer i én løsning."
+    },
+    {
+      "icon": "⚙",
+      "title": "Automation",
+      "description": "Automatiser lys, varme, sensorer, relæer og andre funktioner."
+    }
+  ],
+  "footer_company": "© 2026 MK Industrial Solutions",
+  "footer_cvr": "CVR: Tilføjes når virksomheden er oprettet"
+}

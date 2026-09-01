@@ -6,28 +6,24 @@
 .project-img{width:100%;height:190px;object-fit:cover;display:block;border-bottom:1px solid var(--line)}
 .project-body{padding:24px 26px 26px}
 .project-note{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;background:var(--panel2);color:var(--muted);font-size:14px}
-</style></head><body><header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.png" alt="MK Industrial Solutions" class="brand-logo"><span class="brand-text">INDUSTRIAL SOLUTIONS<small>TECHNICAL DEVELOPMENT & AUTOMATION</small></span></a><nav><a href="index.html">Forside</a><a href="automation.html">⚙ Automation</a><a href="programmering.html">💻 Programmering</a><a href="smarthome.html">🏠 Smart Home</a><a href="3dprint.html">🖨️ 3D Print</a><a href="projekter.html">Projekter</a><a href="index.html#contact">Kontakt</a></nav></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">Projekter & Cases</div><h1>Det vi <span>bygger</span>, udvikler og løser.</h1><p>Her kan du vise konkrete projekter og cases, så kunder kan se løsningerne i praksis.</p></div></section><section><div class="wrap">
+</style></head><body data-cms-page="projects"><header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.png" alt="MK Industrial Solutions" class="brand-logo"><span class="brand-text">INDUSTRIAL SOLUTIONS<small>TECHNICAL DEVELOPMENT & AUTOMATION</small></span></a><nav><a href="index.html">Forside</a><a href="automation.html">⚙ Automation</a><a href="programmering.html">💻 Programmering</a><a href="smarthome.html">🏠 Smart Home</a><a href="3dprint.html">🖨️ 3D Print</a><a href="projekter.html">Projekter</a><a href="index.html#contact">Kontakt</a></nav></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">Projekter & Cases</div><h1>Det vi <span>bygger</span>, udvikler og løser.</h1><p>Her kan du vise konkrete projekter og cases, så kunder kan se løsningerne i praksis.</p></div></section><section><div class="wrap">
 <div class="section-head">
   <div><div class="eyebrow">Visuelle eksempler</div><h2>Tekniske områder</h2></div>
   <p class="lead">Illustrative billeder viser de områder, MK Industrial Solutions arbejder med. Egne kundeprojekter og cases kan tilføjes løbende.</p>
 </div>
-<div class="projects">
-  <article class="project">
-    <img class="project-img" loading="lazy" src="https://images.pexels.com/photos/36564992/pexels-photo-36564992.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Industrielt automationsudstyr og kontrolpanel">
-    <div class="project-body"><div class="tag">Automation</div><h3>Industri & Automation</h3><p>Siemens PLC, ABB frekvensomformere og UMC, fejlfinding, optimering og udvikling af løsninger.</p></div>
-  </article>
-  <article class="project">
-    <img class="project-img" loading="lazy" src="https://images.pexels.com/photos/37880001/pexels-photo-37880001.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Programmering på laptop">
-    <div class="project-body"><div class="tag">Udvikling</div><h3>Programmering</h3><p>Små programmer, automatisering, værktøjer og specialløsninger til konkrete tekniske behov.</p></div>
-  </article>
-  <article class="project">
-    <img class="project-img" loading="lazy" src="https://images.pexels.com/photos/18136105/pexels-photo-18136105.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Smart Home enheder og styring">
-    <div class="project-body"><div class="tag">Smart Home & IoT</div><h3>Home Assistant & ESP32</h3><p>Integrationer, automatisering og egne IoT-løsninger til intelligente hjem og installationer.</p></div>
-  </article>
-  <article class="project">
-    <img class="project-img" loading="lazy" src="https://images.pexels.com/photos/4485456/pexels-photo-4485456.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="3D printer i værksted">
-    <div class="project-body"><div class="tag">3D Print & CAD</div><h3>Specialdele & Prototyper</h3><p>CAD-design og funktionelle 3D-print til prototyper, specialdele og praktiske løsninger.</p></div>
-  </article>
-</div>
+<div class="projects" data-cms-projects-list></div>
 <div class="project-note">Billederne på denne side er illustrative stockfotos og ikke fremstillinger af kundeprojekter. Når du har egne projekter, kan vi erstatte dem med dine egne billeder og beskrivelser.</div>
-</div></section></main><footer><div class="wrap footer-flex"><div>© 2026 MK Industrial Solutions</div><div>CVR: Tilføjes når virksomheden er oprettet</div></div></footer></body></html>
+</div></section></main><footer><div class="wrap footer-flex"><div>© 2026 MK Industrial Solutions</div><div>CVR: Tilføjes når virksomheden er oprettet</div></div></footer>
+<script>
+(async function(){
+  const target=document.querySelector('[data-cms-projects-list]');
+  if(!target)return;
+  try{
+    const r=await fetch('content/projects.json?v='+Date.now(),{cache:'no-store'});
+    const d=await r.json();
+    const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+    target.innerHTML=(d.projects||[]).map(p=>`<article class="project">${p.image?`<img class="project-img" loading="lazy" src="${e(p.image)}" alt="${e(p.alt||p.title)}">`:''}<div class="project-body"><div class="tag">${e(p.tag||'')}</div><h3>${e(p.title||'')}</h3><p>${e(p.description||'')}</p></div></article>`).join('');
+  }catch(err){console.warn('CMS projects could not be loaded',err);}
+})();
+</script>
+</body></html>

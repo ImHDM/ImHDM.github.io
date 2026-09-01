@@ -1,0 +1,41 @@
+{
+  "hero_eyebrow": "⚙ Industri & Automation",
+  "hero_title_before": "Styring,",
+  "hero_title_highlight": "automation",
+  "hero_title_after": "og fejlfinding.",
+  "hero_text": "Fokus på Siemens PLC, ABB frekvensomformere og ABB UMC'er – samt udvikling og optimering af eksisterende industrielle anlæg.",
+  "services": [
+    {
+      "icon": "▣",
+      "title": "Siemens PLC",
+      "description": "Programmering, logik, sekvenser og videreudvikling af eksisterende PLC-programmer."
+    },
+    {
+      "icon": "↗",
+      "title": "ABB frekvensomformere",
+      "description": "Parametrering, opsætning, signaler og fejlfinding på motorstyringer."
+    },
+    {
+      "icon": "⚙",
+      "title": "ABB UMC",
+      "description": "Motorstyring, overvågning, signaler og problemløsning på installationer."
+    },
+    {
+      "icon": "⌁",
+      "title": "Fejlfinding",
+      "description": "Systematisk fejlfinding fra symptom til årsag og løsning."
+    }
+  ],
+  "development_eyebrow": "Udvikling",
+  "development_title": "Gør anlægget smartere.",
+  "development_lead": "Vi undersøger mulighederne for at forbedre funktion, overskuelighed, drift og automatisering – også når løsningen kræver en kombination af PLC, styring og fysisk hardware.",
+  "focus_title": "Mulige opgaver",
+  "focus_items": [
+    "PLC-programmering og ændringer",
+    "Fejlfinding på eksisterende anlæg",
+    "ABB drive- og motorstyring",
+    "Optimering og nye styringsfunktioner"
+  ],
+  "footer_company": "© 2026 MK Industrial Solutions",
+  "footer_cvr": "CVR: Tilføjes når virksomheden er oprettet"
+}

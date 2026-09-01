@@ -1,0 +1,31 @@
+{
+  "hero_eyebrow": "💻 Programmering & Udvikling",
+  "hero_title_before": "Software,",
+  "hero_title_highlight": "automatisering",
+  "hero_title_after": "og specialløsninger.",
+  "hero_text": "Små programmer og værktøjer, der løser konkrete problemer og automatiserer opgaver.",
+  "services": [
+    {
+      "icon": "▣",
+      "title": "Små programmer",
+      "description": "Specialprogrammer udviklet til konkrete behov."
+    },
+    {
+      "icon": "↻",
+      "title": "Automatisering",
+      "description": "Fjern gentagne manuelle opgaver og gør arbejdsgange smartere."
+    },
+    {
+      "icon": "⌘",
+      "title": "Værktøjer",
+      "description": "Små hjælpeværktøjer til data, filer, beregninger eller arbejdsgange."
+    },
+    {
+      "icon": "⇄",
+      "title": "Integration",
+      "description": "Forbindelse mellem systemer, enheder eller eksisterende løsninger."
+    }
+  ],
+  "footer_company": "© 2026 MK Industrial Solutions",
+  "footer_cvr": "CVR: Tilføjes når virksomheden er oprettet"
+}
