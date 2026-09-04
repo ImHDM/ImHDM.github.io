@@ -1,13 +1,45 @@
 {
+  "development_lead": "Vi ser på den konkrete udfordring, undersøger mulighederne og udvikler en løsning, der fungerer i praksis.",
+  "projects_lead": "Små glimt fra andre projekter.",
+  "focus_eyebrow": "Teknisk fokus",
   "hero_eyebrow": "Automation · PLC · Styring · Programmering · Smart Home · 3D Print",
-  "hero_title_before": "Vi udvikler",
-  "hero_title_highlight": "tekniske løsninger",
-  "hero_title_after": "til virkeligheden.",
-  "hero_text": "MK Industrial Solutions arbejder med automation, Siemens PLC, ABB frekvensomformere og UMC'er, fejlfinding, programmering, Smart Home, IoT og 3D-print. Fra optimering af eksisterende anlæg til udvikling af nye løsninger.",
-  "primary_button": "Få et tilbud",
-  "secondary_button": "Se kompetencer",
+  "projects_eyebrow": "Projekter",
+  "development_eyebrow": "Udvikling & optimering",
+  "steps": [
+    {
+      "number": "01 · Forstå",
+      "text": "problemet"
+    },
+    {
+      "number": "02 · Udvikl",
+      "text": "mulighederne"
+    },
+    {
+      "number": "03 · Test",
+      "text": "løsningen"
+    },
+    {
+      "number": "04 · Optimer",
+      "text": "resultatet"
+    }
+  ],
   "services_eyebrow": "Fire hovedområder",
+  "hero_title_highlight": "tekniske løsninger",
+  "contact_eyebrow": "Kontakt",
+  "hero_title_before": "Vi udvikler",
+  "contact_text": "Fortæl kort om opgaven, anlægget eller idéen. Fra fejlfinding, programmering til udvikling, Smart Home og 3D-print. Og alt der imellem.",
+  "primary_button": "Få et tilbud",
+  "hero_title_after": "til virkeligheden.",
+  "focus_title": "Fra eksisterende anlæg til nye idéer",
+  "hero_text": "MK Industrial Solutions arbejder med automation, Siemens PLC, ABB frekvensomformere og UMC'er, fejlfinding, programmering, Smart Home, IoT og 3D-print. Fra optimering af eksisterende anlæg til udvikling af nye løsninger.",
+  "projects_title": "Se hvad der er bygget.",
+  "focus_text": "Det kan være en PLC-ændring, ny styringsfunktion, automatik, et specialværktøj, et Home Assistant-system eller en 3D-printet del. Vi kombinerer kompetencer, når det giver mening.",
+  "development_title": "Find en bedre måde at gøre det på.",
   "services_title": "Teknik fra software til fysisk løsning.",
+  "contact_title": "Har du en teknisk udfordring?",
+  "footer_company": "© 2026 MK Industrial Solutions",
+  "footer_cvr": "CVR: XXXX",
+  "secondary_button": "Se kompetencer",
   "services_lead": "Ét sted for automation, udvikling, Smart Home og 3D-print.",
   "services": [
     {
@@ -34,37 +66,5 @@
       "description": "Specialdele · prototyper · funktionelle løsninger",
       "link": "3dprint.html"
     }
-  ],
-  "development_eyebrow": "Udvikling & optimering",
-  "development_title": "Find en bedre måde at gøre det på.",
-  "development_lead": "Vi ser på den konkrete udfordring, undersøger mulighederne og udvikler en løsning, der fungerer i praksis.",
-  "steps": [
-    {
-      "number": "01 · Forstå",
-      "text": "problemet"
-    },
-    {
-      "number": "02 · Udvikl",
-      "text": "mulighederne"
-    },
-    {
-      "number": "03 · Test",
-      "text": "løsningen"
-    },
-    {
-      "number": "04 · Optimer",
-      "text": "resultatet"
-    }
-  ],
-  "focus_eyebrow": "Teknisk fokus",
-  "focus_title": "Fra eksisterende anlæg til nye idéer",
-  "focus_text": "Det kan være en PLC-ændring, ny styringsfunktion, automatik, et specialværktøj, et Home Assistant-system eller en 3D-printet del. Vi kombinerer kompetencer, når det giver mening.",
-  "projects_eyebrow": "Projekter",
-  "projects_title": "Se hvad der er bygget.",
-  "projects_lead": "Her kommer dine egne cases og projektbilleder.",
-  "contact_eyebrow": "Kontakt",
-  "contact_title": "Har du en teknisk udfordring?",
-  "contact_text": "Fortæl kort om opgaven, anlægget eller idéen. Fra fejlfinding og PLC til udvikling, Smart Home og 3D-print.",
-  "footer_company": "© 2026 MK Industrial Solutions",
-  "footer_cvr": "CVR: Tilføjes når virksomheden er oprettet"
+  ]
 }
