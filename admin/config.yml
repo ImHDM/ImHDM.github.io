@@ -17,7 +17,6 @@ backend:
 
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 site_url: https://mkindustrial.dk
-
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
@@ -152,11 +151,8 @@ collections:
           - {label: "Footer virksomhed", name: "footer_company", widget: "string"}
           - {label: "Footer CVR", name: "footer_cvr", widget: "string"}
 
-  - name: "projects"
-    label: "Projekter"
-    files:
-      - label: "Projektliste"
-        name: "project_list"
+      - label: "Projekter"
+        name: "projects"
         file: "content/projects.json"
         fields:
           - label: "Projekter"
