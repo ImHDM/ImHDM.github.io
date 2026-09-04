@@ -29,46 +29,142 @@ collections:
         name: "home"
         file: "content/index.json"
         fields:
-          - {label: "Titel", name: "title", widget: "string"}
-          - {label: "Overskrift", name: "hero_title", widget: "string"}
-          - {label: "Tekst", name: "hero_text", widget: "text"}
+          - {label: "Lille overskrift", name: "hero_eyebrow", widget: "string"}
+          - {label: "Overskrift – før fremhævet tekst", name: "hero_title_before", widget: "string"}
+          - {label: "Overskrift – fremhævet tekst", name: "hero_title_highlight", widget: "string"}
+          - {label: "Overskrift – efter fremhævet tekst", name: "hero_title_after", widget: "string"}
+          - {label: "Intro tekst", name: "hero_text", widget: "text"}
+          - {label: "Primær knap", name: "primary_button", widget: "string"}
+          - {label: "Sekundær knap", name: "secondary_button", widget: "string"}
+          - {label: "Service lille overskrift", name: "services_eyebrow", widget: "string"}
+          - {label: "Service overskrift", name: "services_title", widget: "string"}
+          - {label: "Service intro", name: "services_lead", widget: "text"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Ikon", name: "icon", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beskrivelse", name: "description", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
+          - {label: "Udvikling lille overskrift", name: "development_eyebrow", widget: "string"}
+          - {label: "Udvikling overskrift", name: "development_title", widget: "string"}
+          - {label: "Udvikling intro", name: "development_lead", widget: "text"}
+          - label: "Udviklingstrin"
+            name: "steps"
+            widget: "list"
+            fields:
+              - {label: "Nummer", name: "number", widget: "string"}
+              - {label: "Tekst", name: "text", widget: "string"}
+          - {label: "Fokus lille overskrift", name: "focus_eyebrow", widget: "string"}
+          - {label: "Fokus overskrift", name: "focus_title", widget: "string"}
+          - {label: "Fokus tekst", name: "focus_text", widget: "text"}
+          - {label: "Projekter lille overskrift", name: "projects_eyebrow", widget: "string"}
+          - {label: "Projekter overskrift", name: "projects_title", widget: "string"}
+          - {label: "Projekter intro", name: "projects_lead", widget: "text"}
+          - {label: "Kontakt lille overskrift", name: "contact_eyebrow", widget: "string"}
+          - {label: "Kontakt overskrift", name: "contact_title", widget: "string"}
+          - {label: "Kontakt tekst", name: "contact_text", widget: "text"}
+          - {label: "Footer virksomhed", name: "footer_company", widget: "string"}
+          - {label: "Footer CVR", name: "footer_cvr", widget: "string"}
+
       - label: "Automation"
         name: "automation"
         file: "content/automation.json"
         fields:
-          - {label: "Titel", name: "title", widget: "string"}
-          - {label: "Overskrift", name: "hero_title", widget: "string"}
-          - {label: "Tekst", name: "hero_text", widget: "text"}
+          - {label: "Lille overskrift", name: "hero_eyebrow", widget: "string"}
+          - {label: "Overskrift – før fremhævet tekst", name: "hero_title_before", widget: "string"}
+          - {label: "Overskrift – fremhævet tekst", name: "hero_title_highlight", widget: "string"}
+          - {label: "Overskrift – efter fremhævet tekst", name: "hero_title_after", widget: "string"}
+          - {label: "Intro tekst", name: "hero_text", widget: "text"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Ikon", name: "icon", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beskrivelse", name: "description", widget: "text"}
+          - {label: "Udvikling lille overskrift", name: "development_eyebrow", widget: "string"}
+          - {label: "Udvikling overskrift", name: "development_title", widget: "string"}
+          - {label: "Udvikling intro", name: "development_lead", widget: "text"}
+          - {label: "Fokus overskrift", name: "focus_title", widget: "string"}
+          - label: "Fokusområder"
+            name: "focus_items"
+            widget: "list"
+            field: {label: "Punkt", name: "item", widget: "string"}
+          - {label: "Footer virksomhed", name: "footer_company", widget: "string"}
+          - {label: "Footer CVR", name: "footer_cvr", widget: "string"}
+
       - label: "Programmering"
         name: "programmering"
         file: "content/programmering.json"
         fields:
-          - {label: "Titel", name: "title", widget: "string"}
-          - {label: "Overskrift", name: "hero_title", widget: "string"}
-          - {label: "Tekst", name: "hero_text", widget: "text"}
+          - {label: "Lille overskrift", name: "hero_eyebrow", widget: "string"}
+          - {label: "Overskrift – før fremhævet tekst", name: "hero_title_before", widget: "string"}
+          - {label: "Overskrift – fremhævet tekst", name: "hero_title_highlight", widget: "string"}
+          - {label: "Overskrift – efter fremhævet tekst", name: "hero_title_after", widget: "string"}
+          - {label: "Intro tekst", name: "hero_text", widget: "text"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Ikon", name: "icon", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beskrivelse", name: "description", widget: "text"}
+          - {label: "Footer virksomhed", name: "footer_company", widget: "string"}
+          - {label: "Footer CVR", name: "footer_cvr", widget: "string"}
+
       - label: "Smart Home"
         name: "smarthome"
         file: "content/smarthome.json"
         fields:
-          - {label: "Titel", name: "title", widget: "string"}
-          - {label: "Overskrift", name: "hero_title", widget: "string"}
-          - {label: "Tekst", name: "hero_text", widget: "text"}
+          - {label: "Lille overskrift", name: "hero_eyebrow", widget: "string"}
+          - {label: "Overskrift – før fremhævet tekst", name: "hero_title_before", widget: "string"}
+          - {label: "Overskrift – fremhævet tekst", name: "hero_title_highlight", widget: "string"}
+          - {label: "Overskrift – efter fremhævet tekst", name: "hero_title_after", widget: "string"}
+          - {label: "Intro tekst", name: "hero_text", widget: "text"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Ikon", name: "icon", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beskrivelse", name: "description", widget: "text"}
+          - {label: "Footer virksomhed", name: "footer_company", widget: "string"}
+          - {label: "Footer CVR", name: "footer_cvr", widget: "string"}
+
       - label: "3D Print"
         name: "3dprint"
         file: "content/3dprint.json"
         fields:
-          - {label: "Titel", name: "title", widget: "string"}
-          - {label: "Overskrift", name: "hero_title", widget: "string"}
-          - {label: "Tekst", name: "hero_text", widget: "text"}
+          - {label: "Lille overskrift", name: "hero_eyebrow", widget: "string"}
+          - {label: "Overskrift – før fremhævet tekst", name: "hero_title_before", widget: "string"}
+          - {label: "Overskrift – fremhævet tekst", name: "hero_title_highlight", widget: "string"}
+          - {label: "Overskrift – efter fremhævet tekst", name: "hero_title_after", widget: "string"}
+          - {label: "Intro tekst", name: "hero_text", widget: "text"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Ikon", name: "icon", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beskrivelse", name: "description", widget: "text"}
+          - {label: "Footer virksomhed", name: "footer_company", widget: "string"}
+          - {label: "Footer CVR", name: "footer_cvr", widget: "string"}
 
   - name: "projects"
     label: "Projekter"
-    file: "content/projects.json"
-    fields:
-      - label: "Projekter"
-        name: "projects"
-        widget: "list"
+    files:
+      - label: "Projektliste"
+        name: "project_list"
+        file: "content/projects.json"
         fields:
-          - {label: "Projektnavn", name: "title", widget: "string"}
-          - {label: "Beskrivelse", name: "description", widget: "text"}
-          - {label: "Billede", name: "image", widget: "image", required: false}
+          - label: "Projekter"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Projektnavn", name: "title", widget: "string"}
+              - {label: "Kategori", name: "tag", widget: "string"}
+              - {label: "Billede", name: "image", widget: "image", required: false}
+              - {label: "Alt-tekst til billede", name: "alt", widget: "string", required: false}
+              - {label: "Beskrivelse", name: "description", widget: "text"}
