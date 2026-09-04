@@ -8,19 +8,19 @@
   "steps": [
     {
       "number": "01 · Forstå",
-      "text": "problemet"
+      "text": "Udfordringen"
     },
     {
-      "number": "02 · Udvikl",
-      "text": "mulighederne"
+      "number": "02 · Udvikle",
+      "text": "Mulighederne"
     },
     {
       "number": "03 · Test",
-      "text": "løsningen"
+      "text": "Løsningen"
     },
     {
       "number": "04 · Optimer",
-      "text": "resultatet"
+      "text": "Resultatet"
     }
   ],
   "services_eyebrow": "Fire hovedområder",
@@ -32,8 +32,8 @@
   "hero_title_after": "til virkeligheden.",
   "focus_title": "Fra eksisterende anlæg til nye idéer",
   "hero_text": "MK Industrial Solutions arbejder med automation, Siemens PLC, ABB frekvensomformere og UMC'er, fejlfinding, programmering, Smart Home, IoT og 3D-print. Fra optimering af eksisterende anlæg til udvikling af nye løsninger.",
-  "projects_title": "Se hvad der er bygget.",
-  "focus_text": "Det kan være en PLC-ændring, ny styringsfunktion, automatik, et specialværktøj, et Home Assistant-system eller en 3D-printet del. Vi kombinerer kompetencer, når det giver mening.",
+  "projects_title": "Se hvad der er lavet.",
+  "focus_text": "Det kan være en PLC-ændring, ny styringsfunktion, automatik, et specialværktøj, et Home Assistant-system eller en 3D-printet del. Vi kombinerer kompetencer, når det giver mening og den bedste løsning for dig.",
   "development_title": "Find en bedre måde at gøre det på.",
   "services_title": "Teknik fra software til fysisk løsning.",
   "contact_title": "Har du en teknisk udfordring?",
