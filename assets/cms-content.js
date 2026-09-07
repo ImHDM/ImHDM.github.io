@@ -2,29 +2,6 @@
   const page = document.body.dataset.cmsPage;
   if (!page) return;
 
-  // Only the homepage is hidden while its dynamic CMS content is loaded.
-  // Subpages immediately show their static HTML and can optionally load projects.
-  const isHome = page === "index";
-
-  const style = document.createElement("style");
-  style.textContent = `
-    body.cms-loading main { visibility: hidden; }
-    body.cms-loading::after {
-      content: "Indlæser…";
-      position: fixed;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      color: #9ba8b2;
-      font: 600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      letter-spacing: .08em;
-      pointer-events: none;
-      z-index: 9999;
-    }
-  `;
-  document.head.appendChild(style);
-  if (isHome) document.body.classList.add("cms-loading");
-
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
     "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
   }[c]));
@@ -39,6 +16,61 @@
     return r.json();
   }
 
+  async function loadProjects(target) {
+    if (!target) return;
+    try {
+      const data = await get("content/projects.json");
+      const list = Array.isArray(data.projects) ? data.projects : [];
+      target.innerHTML = list.map(p => `
+        <article class="project">
+          ${p.image ? `<img class="project-img" loading="lazy" src="${esc(p.image)}" alt="${esc(p.alt || p.title)}">` : ""}
+          <div class="project-body">
+            <div class="tag">${esc(p.tag || "")}</div>
+            <h3>${esc(p.title || "")}</h3>
+            <p>${esc(p.description || "")}</p>
+          </div>
+        </article>`).join("");
+    } catch (e) {
+      console.warn("CMS projects could not be loaded", e);
+    }
+  }
+
+  function footer(data) {
+    const f = document.querySelector("footer");
+    if (!f) return;
+    const divs = f.querySelectorAll(".footer-flex > div");
+    if (divs[0] && data.footer_company) text(divs[0], data.footer_company);
+    if (divs[1] && data.footer_cvr) text(divs[1], data.footer_cvr);
+  }
+
+  // Projects page: load cards opportunistically, never hide the page.
+  if (page === "projects") {
+    loadProjects(document.querySelector("[data-cms-projects-list]"));
+    return;
+  }
+
+  // All other subpages show their HTML immediately.
+  if (page !== "index") return;
+
+  // Homepage: hide the main content before CMS data replaces the static fallback.
+  const style = document.createElement("style");
+  style.textContent = `
+    body.cms-loading main { visibility: hidden; }
+    body.cms-loading::before {
+      content: "Indlæser…";
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #9ba8b2;
+      font: 600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      letter-spacing: .08em;
+      z-index: 99999;
+    }
+  `;
+  document.head.appendChild(style);
+  document.body.classList.add("cms-loading");
+
   function hero(data) {
     const sec = document.querySelector("main .hero");
     if (!sec) return;
@@ -48,8 +80,8 @@
     if (h1 && (data.hero_title_before != null || data.hero_title_highlight != null || data.hero_title_after != null)) {
       h1.innerHTML = `${esc(data.hero_title_before)} <span>${esc(data.hero_title_highlight)}</span> ${esc(data.hero_title_after)}`;
     }
-
     text(sec.querySelector("p"), data.hero_text);
+
     const btns = sec.querySelectorAll(".buttons .btn");
     if (btns[0] && data.primary_button) text(btns[0], data.primary_button);
     if (btns[1] && data.secondary_button) text(btns[1], data.secondary_button);
@@ -64,34 +96,6 @@
         <h3>${esc(s.title)}</h3>
         <p>${esc(s.description)}</p>
       </a>`).join("");
-  }
-
-  function footer(data) {
-    const f = document.querySelector("footer");
-    if (!f) return;
-    const divs = f.querySelectorAll(".footer-flex > div");
-    if (divs[0] && data.footer_company) text(divs[0], data.footer_company);
-    if (divs[1] && data.footer_cvr) text(divs[1], data.footer_cvr);
-  }
-
-  async function loadProjects(target) {
-    if (!target) return;
-    try {
-      const data = await get("content/projects.json");
-      const list = Array.isArray(data.projects) ? data.projects : [];
-      if (!list.length) return;
-      target.innerHTML = list.map(p => `
-        <article class="project">
-          ${p.image ? `<img class="project-img" loading="lazy" src="${esc(p.image)}" alt="${esc(p.alt || p.title)}">` : ""}
-          <div class="project-body">
-            <div class="tag">${esc(p.tag || "")}</div>
-            <h3>${esc(p.title || "")}</h3>
-            <p>${esc(p.description || "")}</p>
-          </div>
-        </article>`).join("");
-    } catch (e) {
-      console.warn("CMS projects could not be loaded", e);
-    }
   }
 
   async function home(data) {
@@ -138,20 +142,15 @@
     footer(data);
   }
 
-  if (!isHome) {
-    const projects = document.querySelector("[data-cms-projects-list]");
-    if (projects) loadProjects(projects);
-    return;
-  }
-
-  const reveal = () => document.body.classList.remove("cms-loading");
-  const fallbackTimer = setTimeout(reveal, 5000);
+  const fallbackTimer = setTimeout(() => {
+    document.body.classList.remove("cms-loading");
+  }, 5000);
 
   get("content/index.json")
     .then(home)
     .catch(e => console.warn("CMS content could not be loaded", e))
     .finally(() => {
       clearTimeout(fallbackTimer);
-      reveal();
+      document.body.classList.remove("cms-loading");
     });
 })();

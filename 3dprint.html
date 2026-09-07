@@ -82,27 +82,246 @@
 html { scroll-behavior: smooth; }
 #kontakt { scroll-margin-top: 90px; }
 </style>
-</head><body class="cms-loading" data-cms-page="3dprint"><header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.png" alt="MK Industrial Solutions" class="brand-logo"><span class="brand-text">INDUSTRIAL SOLUTIONS<small>TECHNICAL DEVELOPMENT & AUTOMATION</small></span></a><nav><a href="index.html">Forside</a><a href="automation.html">⚙ Automation</a><a href="programmering.html">💻 Programmering</a><a href="smarthome.html">🏠 Smart Home</a><a href="3dprint.html">🖨️ 3D Print</a><a href="projekter.html">Projekter</a><a href="index.html#contact">Kontakt</a></nav></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">🖨️ 3D Print & CAD</div><h1>Fra idé til <span>fysisk løsning</span>.</h1><p>Specialdele, prototyper, beslag og funktionelle emner – fra CAD og tilpasning til færdigt 3D-print.</p><div class="buttons"><a class="btn primary" href="index.html#contact">Få et tilbud</a></div></div></section><section><div class="wrap"><div class="grid" data-cms-services><div class="card"><div class="icon">◈</div><h3>Specialdele</h3><p>Tilpassede dele til konkrete behov og projekter.</p></div><div class="card"><div class="icon">⌗</div><h3>CAD</h3><p>Modellering og tilpasning ud fra mål, idéer eller eksisterende dele.</p></div><div class="card"><div class="icon">◇</div><h3>Prototyper</h3><p>Hurtig fremstilling og afprøvning af nye idéer.</p></div><div class="card"><div class="icon">+</div><h3>Funktionelle emner</h3><p>Beslag, værktøjer, dæksler og andre praktiske komponenter.</p></div></div></div></section></main><footer>
+<style>
+/* ===== V11 MOBILE HEADER / RESPONSIVE FIX ===== */
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+#kontakt, #contact { scroll-margin-top: 90px; }
+
+.mobile-menu-toggle {
+  display: none;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  margin-left: 12px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.04);
+  color: #f0f3f5;
+  border: 1px solid #26313a;
+  border-radius: 9px;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  header .wrap.nav {
+    min-height: 72px;
+    height: 72px;
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  header .brand {
+    min-width: 0;
+    max-width: calc(100% - 58px);
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  header .brand-logo {
+    width: 86px;
+    max-width: 86px;
+    max-height: 48px;
+    flex: 0 0 86px;
+  }
+
+  header .brand-text {
+    display: none;
+  }
+
+  header .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  header nav {
+    display: none !important;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    top: 66px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 8px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px !important;
+    background: rgba(10,14,18,.98);
+    border: 1px solid #26313a;
+    border-radius: 12px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.5);
+    z-index: 1000;
+  }
+
+  header nav.mobile-open {
+    display: flex !important;
+  }
+
+  header nav a {
+    width: 100%;
+    padding: 12px 13px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  header nav a:active,
+  header nav a:hover {
+    background: rgba(231,168,46,.10);
+  }
+
+  .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 100%;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 72px 0 64px;
+  }
+
+  .hero .wrap {
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: .13em;
+    line-height: 1.8;
+  }
+
+  h1 {
+    font-size: clamp(43px, 13vw, 60px);
+    line-height: .98;
+    letter-spacing: -.05em;
+    max-width: 100%;
+    margin: 16px 0 22px;
+    overflow-wrap: normal;
+  }
+
+  .hero p, .lead {
+    font-size: 17px;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 11px;
+    margin-top: 26px;
+  }
+
+  .buttons .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+    font-size: 17px;
+  }
+
+  .techbar .wrap {
+    min-height: 52px;
+    gap: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .techbar .wrap::-webkit-scrollbar { display: none; }
+
+  section {
+    padding: 58px 0;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .grid,
+  .projects,
+  .feature {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .featurebox,
+  .contact {
+    padding: 22px;
+  }
+
+  .project {
+    min-height: auto;
+  }
+
+  .project-img {
+    height: 180px;
+  }
+
+  .section-head {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .location-note {
+    padding: 0 16px;
+  }
+
+  .footer-flex {
+    display: block;
+  }
+
+  .footer-flex div + div {
+    margin-top: 7px;
+  }
+}
+</style>
+</head><body data-cms-page="3dprint"><header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.png" alt="MK Industrial Solutions" class="brand-logo"><span class="brand-text">INDUSTRIAL SOLUTIONS<small>TECHNICAL DEVELOPMENT & AUTOMATION</small></span></a><button class="mobile-menu-toggle" type="button" aria-label="Åbn menu" aria-expanded="false">☰</button><nav><a href="index.html">Forside</a><a href="automation.html">⚙ Automation</a><a href="programmering.html">💻 Programmering</a><a href="smarthome.html">🏠 Smart Home</a><a href="3dprint.html">🖨️ 3D Print</a><a href="projekter.html">Projekter</a><a href="index.html#kontakt">Kontakt</a></nav></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">🖨️ 3D Print & CAD</div><h1>Fra idé til <span>fysisk løsning</span>.</h1><p>Specialdele, prototyper, beslag og funktionelle emner – fra CAD og tilpasning til færdigt 3D-print.</p><div class="buttons"><a class="btn primary" href="index.html#kontakt">Få et tilbud</a></div></div></section><section><div class="wrap"><div class="grid" data-cms-services><div class="card"><div class="icon">◈</div><h3>Specialdele</h3><p>Tilpassede dele til konkrete behov og projekter.</p></div><div class="card"><div class="icon">⌗</div><h3>CAD</h3><p>Modellering og tilpasning ud fra mål, idéer eller eksisterende dele.</p></div><div class="card"><div class="icon">◇</div><h3>Prototyper</h3><p>Hurtig fremstilling og afprøvning af nye idéer.</p></div><div class="card"><div class="icon">+</div><h3>Funktionelle emner</h3><p>Beslag, værktøjer, dæksler og andre praktiske komponenter.</p></div></div></div></section></main><footer>
 <div class="location-note">
   <strong>Lokation:</strong> 4900 Nakskov, Lolland<br>
   Lolland-Falster · Sjælland · Hele Danmark · Fjernprogrammering · Fjernfejlfinding
 </div>
 <div class="wrap footer-flex"><div>© 2026 MK Industrial Solutions</div><div>CVR: Tilføjes når virksomheden er oprettet</div></div></footer><script src="assets/cms-content.js"></script>
-<script id="V9-mobile-menu">
+
+<script id="V11-mobile-menu">
 (function(){
   const btn = document.querySelector('.mobile-menu-toggle');
-  const nav = document.querySelector('header nav, header .nav-links');
+  const nav = document.querySelector('header nav');
   if (!btn || !nav) return;
+
   btn.addEventListener('click', function(){
     const open = nav.classList.toggle('mobile-open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Luk menu' : 'Åbn menu');
     btn.textContent = open ? '✕' : '☰';
   });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('mobile-open');
-    btn.setAttribute('aria-expanded', 'false');
-    btn.textContent = '☰';
-  }));
+
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      nav.classList.remove('mobile-open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Åbn menu');
+      btn.textContent = '☰';
+    });
+  });
+
+  window.addEventListener('resize', function(){
+    if (window.innerWidth > 760) {
+      nav.classList.remove('mobile-open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = '☰';
+    }
+  });
 })();
 </script>
 
