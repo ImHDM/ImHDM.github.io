@@ -325,4 +325,22 @@ body { overflow-x: hidden; }
 })();
 </script>
 
+
+<script id="MK-cta-tracking">
+(function(){
+  if (typeof window.gtag !== 'function') return;
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a,button');
+    if (!a) return;
+    const label = (a.textContent || '').trim().replace(/\s+/g,' ').slice(0,80);
+    if (!label) return;
+    if (/få et tilbud|kontakt/i.test(label)) {
+      window.gtag('event', 'cta_click', {
+        cta_text: label
+      });
+    }
+  });
+})();
+</script>
+
 </body></html>

@@ -1,0 +1,29 @@
+MK Industrial Solutions V12 – Google Analytics + Google Ads conversions
+
+Primary conversion:
+generate_lead
+
+It is fired on tak.html, which is the successful contact-form confirmation page.
+This means a conversion is counted only after a contact form has redirected successfully
+to the thank-you page.
+
+Secondary event:
+cta_click
+Tracks clicks on buttons/links whose text contains "Få et tilbud" or "Kontakt".
+Do NOT use cta_click as the main Google Ads conversion; generate_lead is the important lead event.
+
+After deployment:
+1. Open Google Analytics > Admin > Data display > Events.
+2. Submit a real test contact form.
+3. Wait a few minutes and confirm generate_lead appears.
+4. Mark generate_lead as a Key event.
+5. Link Google Ads to this GA4 property.
+6. In Google Ads, create/import a conversion based on generate_lead.
+7. Set generate_lead as a Primary conversion if you want Smart Bidding to optimize for submitted contact forms.
+
+Important:
+Do not test by repeatedly refreshing tak.html, because that can trigger generate_lead again.
+Test with an actual form submission.
+
+Google Analytics Measurement ID:
+G-MFM9PKK4P8
