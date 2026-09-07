@@ -15,14 +15,91 @@
 .project-img{width:100%;height:190px;object-fit:cover;display:block;border-bottom:1px solid var(--line)}
 .project-body{padding:24px 26px 26px}
 .project-note{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;background:var(--panel2);color:var(--muted);font-size:14px}
-</style><style id="cms-loading-style">body.cms-loading > *{visibility:hidden!important}body.cms-loading::before{content:"Indlæser…";position:fixed;inset:0;display:grid;place-items:center;color:#9ba8b2;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;letter-spacing:.08em;z-index:99999}body.cms-loading{overflow:hidden}</style></head><body class="cms-loading" data-cms-page="projects"><header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.png" alt="MK Industrial Solutions" class="brand-logo"><span class="brand-text">INDUSTRIAL SOLUTIONS<small>TECHNICAL DEVELOPMENT & AUTOMATION</small></span></a><nav><a href="index.html">Forside</a><a href="automation.html">⚙ Automation</a><a href="programmering.html">💻 Programmering</a><a href="smarthome.html">🏠 Smart Home</a><a href="3dprint.html">🖨️ 3D Print</a><a href="projekter.html">Projekter</a><a href="index.html#contact">Kontakt</a></nav></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">Projekter & Cases</div><h1>Det vi <span>bygger</span>, udvikler og løser.</h1><p>Her kan du vise konkrete projekter og cases, så kunder kan se løsningerne i praksis.</p></div></section><section><div class="wrap">
+</style><style id="cms-loading-style">body.cms-loading > *{visibility:hidden!important}body.cms-loading::before{content:"Indlæser…";position:fixed;inset:0;display:grid;place-items:center;color:#9ba8b2;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;letter-spacing:.08em;z-index:99999}body.cms-loading{overflow:hidden}</style><style>
+/* V9 FINAL additions */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.18);
+  color: inherit;
+  border-radius: 8px;
+  width: 44px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+@media (max-width: 760px) {
+  header .nav {
+    position: relative;
+  }
+  .mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav,
+  header .nav-links {
+    display: none !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 10px);
+    flex-direction: column;
+    gap: 0 !important;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(15,18,21,.98);
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 15px 40px rgba(0,0,0,.35);
+    z-index: 1000;
+  }
+  header nav.mobile-open,
+  header .nav-links.mobile-open {
+    display: flex !important;
+  }
+  header nav a,
+  header .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+  }
+}
+.location-note {
+  margin-top: 10px;
+  color: #9ba8b2;
+  font-size: .92rem;
+  line-height: 1.6;
+}
+.location-note strong {
+  color: inherit;
+}
+.remote-service {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  background: rgba(255,255,255,.025);
+}
+.remote-service h3 {
+  margin-top: 0;
+}
+html { scroll-behavior: smooth; }
+#kontakt { scroll-margin-top: 90px; }
+</style>
+</head><body class="cms-loading" data-cms-page="projects"><header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.png" alt="MK Industrial Solutions" class="brand-logo"><span class="brand-text">INDUSTRIAL SOLUTIONS<small>TECHNICAL DEVELOPMENT & AUTOMATION</small></span></a><nav><a href="index.html">Forside</a><a href="automation.html">⚙ Automation</a><a href="programmering.html">💻 Programmering</a><a href="smarthome.html">🏠 Smart Home</a><a href="3dprint.html">🖨️ 3D Print</a><a href="projekter.html">Projekter</a><a href="index.html#contact">Kontakt</a></nav></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">Projekter & Cases</div><h1>Det vi <span>bygger</span>, udvikler og løser.</h1><p>Her kan du vise konkrete projekter og cases, så kunder kan se løsningerne i praksis.</p></div></section><section><div class="wrap">
 <div class="section-head">
   <div><div class="eyebrow">Visuelle eksempler</div><h2>Tekniske områder</h2></div>
   <p class="lead">Illustrative billeder viser de områder, MK Industrial Solutions arbejder med. Egne kundeprojekter og cases kan tilføjes løbende.</p>
 </div>
 <div class="projects" data-cms-projects-list></div>
 <div class="project-note">Billederne på denne side er illustrative stockfotos og ikke fremstillinger af kundeprojekter. Når du har egne projekter, kan vi erstatte dem med dine egne billeder og beskrivelser.</div>
-</div></section></main><footer><div class="wrap footer-flex"><div>© 2026 MK Industrial Solutions</div><div>CVR: Tilføjes når virksomheden er oprettet</div></div></footer>
+</div></section></main><footer>
+<div class="location-note">
+  <strong>Lokation:</strong> 4900 Nakskov, Lolland<br>
+  Lolland-Falster · Sjælland · Hele Danmark · Fjernprogrammering · Fjernfejlfinding
+</div>
+<div class="wrap footer-flex"><div>© 2026 MK Industrial Solutions</div><div>CVR: Tilføjes når virksomheden er oprettet</div></div></footer>
 <script>
 (async function(){
   const target=document.querySelector('[data-cms-projects-list]');
@@ -35,4 +112,23 @@
   }catch(err){console.warn('CMS projects could not be loaded',err);}
 })();
 </script>
+
+<script id="V9-mobile-menu">
+(function(){
+  const btn = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('header nav, header .nav-links');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    const open = nav.classList.toggle('mobile-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? '✕' : '☰';
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('mobile-open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = '☰';
+  }));
+})();
+</script>
+
 </body></html>
